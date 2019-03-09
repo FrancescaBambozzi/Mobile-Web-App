@@ -1,0 +1,194 @@
+{
+    "september": [
+        {
+            "date": "9/01",
+            "location": "AJ Katzenmaier",
+            "time": "9:30 a.m.",
+            "team": "U1",
+            "host": "U4",
+        },
+        {
+            "date": "9/01",
+            "location": "Greenbay",
+            "time": "1:00 p.m.",
+            "team": "U3",
+            "host": "U2",
+        },
+        {
+            "date": "9/08",
+            "location": "Howard A Yeager",
+            "time": "9:30 a.m.",
+            "team": "U5",
+            "host": "U6",
+        },
+        {
+            "date": "9/08",
+            "location": "Marjorie P Hart",
+            "time": "1:00 p.m.",
+            "team": "U6",
+            "host": "U1",
+        },
+        {
+            "date": "9/15",
+            "location": "North",
+            "time": "9:30 a.m.",
+            "team": "U2",
+            "host": "U4",
+        },
+        {
+            "date": "9/15",
+            "location": "AJ Katzenmaier",
+            "time": "1:00 p.m.",
+            "team": "U3",
+            "host": "U5",
+        },
+        {
+            "date": "9/22",
+            "location": "South",
+            "time": "9:30 a.m.",
+            "team": "U1",
+            "host": "U3",
+        },
+        {
+            "date": "9/22",
+            "location": "Howard A Yeager",
+            "time": "1:00 p.m.",
+            "team": "U2",
+            "host": "U6",
+        },
+        {
+            "date": "9/29",
+            "location": "Greenbay",
+            "time": "9:30 a.m.",
+            "team": "U4",
+            "host": "U5",
+        }
+  ],
+    "october": [
+        {
+            "date": "10/06",
+            "location": "Marjorie P Hart",
+            "time": "9:30 a.m.",
+            "team": "U2",
+            "host": "U5",
+        },
+        {
+            "date": "10/06",
+            "location": "South",
+            "time": "1:00 p.m.",
+            "team": "U1",
+            "host": "U6",
+        },
+        {
+            "date": "10/13",
+            "location": "Howard A Yeager",
+            "time": "9:30 a.m.",
+            "team": "U3",
+            "host": "U4",
+        },
+        {
+            "date": "10/13",
+            "location": "Greenbay",
+            "time": "1:00 p.m.",
+            "team": "U5",
+            "host": "U1",
+        },
+        {
+            "date": "10/20",
+            "location": "North",
+            "time": "9:30 a.m.",
+            "team": "U6",
+            "host": "U3",
+        },
+        {
+            "date": "10/20",
+            "location": "Marjorie P Hart",
+            "time": "1:00 p.m.",
+            "team": "U2",
+            "host": "U4",
+        },
+        {
+            "date": "10/27",
+            "location": "AJ Katzenmaier",
+            "time": "9:30 a.m.",
+            "team": "U3",
+            "host": "U1",
+        },
+        {
+            "date": "10/27",
+            "location": "Howard A Yeager",
+            "time": "1:00 p.m.",
+            "team": "U5",
+            "host": "U6",
+        },
+
+  ],
+    "events": [
+        {
+            "event_date": "August 4",
+            "event_description": "NYSL fundraiser"
+        },
+        {
+            "event_date": "August 16",
+            "event_description": "Season Kick-off: Meet the Teams"
+        },
+        {
+            "event_date": "September 1",
+            "event_description": "First Game of the Season (Check Game Schedule for details)"
+        },
+    ],
+    "AJ Katzenmaier": {
+        "name": "AJ Katzenmaier",
+        "location_url": "https://goo.gl/maps/rsWKeN1bRj32",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.7810520615835!2d-87.86492878454477!3d42.32586847918918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f932fbc6ba7cd%3A0xcf2bbe275c6da815!2sA+J+Katzenmaier+Elementary+School!5e0!3m2!1sen!2snl!4v1551187784988\"><\/ iframe>"
+    },
+    "Greenbay": {
+        "name": "Greenbay",
+        "location_url": "https://goo.gl/maps/wSoyrpd1G8C2",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.011012009334!2d-87.87105288454495!3d42.3209638791895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f933bce5af881%3A0x740a7a7d548adce1!2sGreenbay+Elementary+School+(K-5)!5e0!3m2!1sen!2snl!4v1551188296939\"><\/ iframe>"
+    },
+    "Howard A Yeager": {
+        "name": "Howard A Yeager",
+        "location_url": "https://goo.gl/maps/Brbxtd1mRsq",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.270062631387!2d-87.85606978454513!3d42.3154382791899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8b51fa5d6efe771a!2sHoward+A.+Yeager+School+(PREK-K)!5e0!3m2!1sen!2snl!4v1551188337334\"><\/ iframe>"
+    },
+    "Marjorie P Hart": {
+        "name": "Marjorie P Hart",
+        "location_url": "https://goo.gl/maps/bqWJ6YMMcuP2",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11873.34337502037!2d-87.6513086!3d41.9286342!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdbff5d5dfcfcfa35!2sMarjorie+P+Hart+Elementary!5e0!3m2!1sen!2snl!4v1551188393953\"><\/ iframe>"
+    },
+    "North": {
+        "name": "North",
+        "location_url": "https://goo.gl/maps/qAoK4GQkULH2",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.21543878218!2d-87.65599928455724!3d41.93122177921798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd301450b5eb3%3A0x465edab771927995!2sN+Sheffield+Ave%2C+Chicago%2C+IL%2C+USA!5e0!3m2!1sen!2snl!4v1551188427174\"><\/ iframe>"
+    },
+    "South": {
+        "name": "South",
+        "location_url": "https://goo.gl/maps/ziB6NaRGLdv",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.687026659204!2d-87.63885758455889!3d41.87807967922224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2cbf01ac557f%3A0x6f4e00dc186bb4db!2sS+Wacker+Dr%2C+Chicago%2C+IL%2C+USA!5e0!3m2!1sen!2snl!4v1551188467654\"><\/ iframe>"
+    },
+    "U1": {
+        "name": "Red Lions",
+        "logo": "<img src=\"img/001-leo-lion-head-side.png\" />",
+    },
+    "U2": {
+        "name": "Black Sheeps",
+        "logo": "<img src=\"img/002-sheep.png\" />",
+    },
+    "U3": {
+        "name": "Pink Panthers",
+        "logo": "<img src=\"img/003-panther-shape.png\" />",
+    },
+    "U4": {
+        "name": "Bumble Bees",
+        "logo": "<img src=\"img/004-bee.png\" />",
+    },
+    "U5": {
+        "name": "Land Sharks",
+        "logo": "<img src=\"img/005-shark.png\" />",
+    },
+    "U6": {
+        "name": "Zipping Zebras",
+        "logo": "<img src=\"img/006-zebra.png\" />",
+    }
+}

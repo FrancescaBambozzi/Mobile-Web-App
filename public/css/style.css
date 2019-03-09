@@ -1,0 +1,689 @@
+/*
+  ========================================
+  Generale Layout 
+  ========================================
+*/
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+
+h3 {
+    font-family: "Staatliches", sans-serif;
+    font-size: 26px;
+    font-style: oblique;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a {
+    font-family: "Staatliches", sans-serif;
+    font-size: 18px;
+}
+
+ul li {
+    list-style: none;
+    font-family: 'Oswald', sans-serif;
+    color: #2f2f2f;
+    line-height: 25px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 100;
+    border: none;
+}
+
+/*
+  ========================================
+  Icons Bar
+  ========================================
+*/
+.icons-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.icons-container {
+    padding: 0;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+.icons {
+    border: none;
+    float: left;
+    margin-right: 10px;
+    box-shadow: 3px 3px 3px #2f2f2f;
+    border-radius: 50%;
+}
+
+.icons-image {
+    width: 35px;
+    height: 35px;
+}
+
+/*
+  ========================================
+  Navigation Bar
+  ========================================
+*/
+.navigation-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .7);
+    clear: both;
+    box-shadow: 2px 2px 2px #000;
+    border-radius: 5px;
+}
+
+.navigation-bar ul li {
+    float: left;
+}
+
+.navigation-bar ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+/*
+  ========================================
+  Landing Page
+  ========================================
+*/
+/* Page style */
+.landing_page {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    text-align: center;
+    background-image: url(../img/281857-P723JA-981.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 30px;
+}
+
+/* Teams Accordions */
+.teams-accordion-container {
+    text-align: center;
+    padding: 30px 0 50px 0;
+}
+
+.team-button {
+    text-align: center;
+    padding: 0;
+    width: 300px;
+    margin-bottom: 5px;
+}
+
+.team-link {
+    padding: 20px;
+    background-image: linear-gradient(90deg, #2cedda 0%, #50ff21 100%);
+    opacity: 0.9;
+    box-shadow: 2px 2px 2px #2f2f2f;
+    color: #000;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.team-link:hover {
+    color: #000;
+}
+
+.teams-list {
+    display: flex;
+    flex-flow: column wrap;
+    background-image: linear-gradient(90deg, #878787 0%, #f2f2f2 100%);
+    opacity: 0.9;
+    align-items: center;
+    text-align: center;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.team-info {
+    text-align: center;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.team-info span {
+    font-size: 24px;
+    padding: 5px;
+}
+
+.team_logo {
+    width: 100px;
+    height: 100px;
+}
+
+/*Internal Team Info Layout*/
+#team-logo-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 50px 0 50px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.team-event-container {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+}
+
+/*
+  ========================================
+  Locations Page
+  ========================================
+*/
+
+.locations-container {
+    background-image: linear-gradient(90deg, #BF3A8D 0%, #E91C3E 100%);
+    opacity: 0.9;
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.iframe-container {
+    padding: 30px 0 50px 0;
+    height: 500px;
+}
+
+.iframe {
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #f2f2f2;
+    border-top: 2px solid #f2f2f2;
+    padding: 5px 0 5px 0;
+}
+
+/*
+  ========================================
+  Events Page
+  ========================================
+*/
+.events-container {
+    display: flex;
+    width: 300px;
+    flex-flow: column wrap;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #f2f2f2;
+    box-shadow: 5px 10px #f2f2f2;
+    background-image: url(../img/kick.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#upcoming-events {
+    background-image: linear-gradient(90deg, #2cedda 0%, #50ff21 100%);
+    opacity: 0.9;
+    box-shadow: 2px 2px 2px #2f2f2f;
+    border-radius: 5px;
+    width: 300px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.upcoming-text-container {
+    border-top: 1px solid #565656;
+    padding-bottom: 20px;
+}
+
+.upcoming-text {
+    font-family: "Staatliches", sans-serif;
+    padding: 20px 10px 0 10px;
+}
+
+/* Schedule Accordions */
+.schedules-container {
+    margin-top: 20px;
+}
+
+.schedule-button {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(90deg, #BF3A8D 0%, #E91C3E 100%);
+    opacity: 0.9;
+    box-shadow: 2px 2px 2px #2f2f2f;
+    border-radius: 5px;
+    width: 300px;
+    margin-bottom: 5px;
+}
+
+.schedule-link {
+    color: #fff;
+    padding-top: 10px;
+}
+
+.schedule-link:hover {
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+.events-list {
+    margin-top: 20px;
+    border-left: 1px solid #f2f2f2;
+}
+
+.event-text {
+    color: #fff;
+}
+
+/*
+  ========================================
+  Sign In Page
+  ========================================
+*/
+/*
+.message {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    background-color: lightgoldenrodyellow;
+    border-radius: 10px;
+    opacity: 0.8;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+} */
+
+.myMessage {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(210, 250, 220);
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+#posts {
+    height: 350px;
+    width: 300px;
+    overflow: scroll;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.advice {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    box-shadow: 2px 2px 2px #2f2f2f;
+    margin: 10px 10px 0 10px;
+}
+
+.chat-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px 0 30px 0;
+    background-color: #f2f2f2;
+}
+
+.chat-container:before {
+    content: "Nysl chat";
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-family: "Staatliches", sans-serif;
+    text-decoration: underline overline;
+}
+
+.working-chat {
+    background-image: linear-gradient(90deg, #BF3A8D 0%, #E91C3E 100%);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #2f2f2f;
+    margin-bottom: 10px;
+}
+
+.active-users-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    border-bottom: 1px solid #fff;
+    margin: 10px;
+    padding: 10px;
+    text-transform: capitalize;
+
+}
+
+.photo {
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: contain;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-left: 5px;
+}
+
+.notification:not(:last-child) {
+    margin-bottom: .3rem;
+}
+
+.notification.is-info {
+    text-align: right;
+    max-width: 80%;
+    align-self: flex-end;
+    padding: 5px;
+    margin: 5px;
+    background-image: linear-gradient(90deg, #2cedda 0%, #50ff21 100%);
+    box-shadow: 2px 2px 2px #2f2f2f;
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+.notification.is-primary {
+    text-align: left;
+    max-width: 80%;
+    align-self: flex-start;
+    padding: 5px;
+    margin: 5px;
+    background-image: linear-gradient(90deg, #2cedda 0%, #50ff21 100%);
+    box-shadow: 2px 2px 2px #2f2f2f;
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+hr {
+    width: 80%;
+    margin-left: 0;
+}
+
+.input-send-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.input {
+    background-image: linear-gradient(90deg, #BF3A8D 0%, #E91C3E 100%);
+    opacity: 0.9;
+    border: none;
+    margin-left: 10px;
+}
+
+::placeholder {
+    color: #000;
+    font-style: oblique;
+    font-family: 'Oswald', sans-serif;
+}
+
+#textInput {
+    color: # fff;
+}
+
+.send-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 60px;
+}
+
+.button.is-primary {
+    border: none;
+    background: none;
+}
+
+.button.is-info {
+    margin: 20px;
+    padding: 10px;
+    background-image: linear-gradient(90deg, #2cedda 0%, #50ff21 100%);
+    border: none;
+    box-shadow: 2px 2px 2px #2f2f2f;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+
+.name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    font-family: 'Oswald', sans-serif;
+    text-transform: capitalize;
+}
+
+/*
+  ========================================
+  Chat In Page
+  ========================================
+*/
+
+
+/*****
+  ========================================
+  Landscape Mode Style
+  ========================================
+*****/
+
+@media (orientation: landscape) {
+
+    /*General Layout*/
+    .page-container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+
+    /*Typography*/
+    h3 {
+        font-size: 20px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+
+    /*Navigation Section*/
+    .navigation-bar {
+        margin-top: 20px;
+    }
+
+    .icons-container {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-start;
+    }
+
+    .icons-bar {
+        margin: 50px 0 0 0;
+    }
+
+    .icons {
+        margin-top: 10px;
+    }
+
+    /*Landing Page Layout*/
+    .landing_page {
+        height: 100%;
+    }
+
+    .landscape-mode {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-start;
+    }
+
+    .teams-accordion-container {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        width: 600px;
+    }
+
+    .team-button {
+        width: 80%;
+
+    }
+
+    .team-button:hover {
+        width: 80%;
+    }
+
+    .team-link {
+        font-size: 18px;
+        padding: 5px 0 5px 0;
+    }
+
+    .teams-list {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        text-align: center;
+        width: 90%;
+        height: 100%;
+        background-color: rgba(220, 220, 220, 0.9);
+        box-shadow: 2px 2px 2px #2f2f2f;
+        margin: 10px;
+        padding-bottom: 10px;
+    }
+
+    .team_logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    /*Locations Page Layout*/
+    .iframe-container {
+        height: 300px;
+        width: 450px;
+    }
+
+    /*Events Page Layout*/
+
+    #upcoming-events {
+        width: 500px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .upcoming-text-container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        width: 500px;
+        margin-top: 10px;
+    }
+
+    .upcoming-text {
+        width: 30%;
+        padding-top: 10px;
+        border-right: 1px solid #565656;
+        font-size: 14px;
+    }
+
+    .upcoming-text:last-child {
+        border: none;
+    }
+
+    /*Schedule Buttons*/
+    .schedules-container {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .schedule-button {
+        width: 500px;
+        padding: 0;
+    }
+
+    .schedule-link {
+        font-size: 16px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .events-list {
+        padding-left: 8px;
+        margin-top: 0;
+        border-left: 1px solid #f2f2f2;
+    }
+
+    #users_div {
+        display: block;
+        width: 200px;
+    }
+
+    /*Chat Style*/
+    .chat-container {
+        padding: 5px 0 5px 0;
+    }
+
+    .chat-container:before {
+        margin-bottom: 5px;
+        font-size: 26px;
+        margin-top: 5px;
+    }
+
+    .working-chat {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        width: 90%;
+    }
+
+    #users_div {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        border-bottom: 1px solid #fff;
+        margin: 10px;
+        padding: 10px;
+        width: 90%;
+    }
+
+    #posts {
+        height: 150px;
+        width: 500px;
+        overflow: scroll;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-send-container {
+        align-self: flex-start;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .send-icon {
+        margin-left: 300px;
+    }
+
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap Mobile-First approach-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <title>NYSL</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="app" class="container">
+
+        <!--Landing Page-->
+        <div id="teams" v-show="currentView == 'teams'" class="container page-container landing_page">
+            <!--Icons Bar-->
+            <div class="container icons-bar">
+                <ul class="icons-container">
+                    <li class="icons"><a href="mailto:nysl@chisoccer.org.com?Subject=Team Info%20" target="_blank"><img class="icons-image" src="img/002-closed-envelope-circle.png" alt="email-icon"></a></li>
+                    <li class="icons" @click="setCurrentView('chat')"><a href="#chat"><img class="icons-image" src="img/003-speech-bubble.png" alt="chat-icon"></a></li>
+                    <li class="icons" @click="setCurrentView('chat')"><a href="#chat"><img class="icons-image" src="img/004-log-in-button-with-arrow.png" alt="login-icon"></a></li>
+                    <li class="icons"><img class="icons-image" src="img/005-share.png" alt="share-icon"></li>
+                </ul>
+            </div>
+
+            <div class="container landscape-mode">
+                <!--Nav Bar-->
+                <nav class="navigation-bar container-fluid">
+                    <ul class="nav navbar-nav nav-inverse">
+                        <li class="active"><a href="#teams">Teams</a></li>
+                        <li @click="setCurrentView('locations')"><a href="#locations">Locations</a></li>
+                        <li @click="setCurrentView('events')"><a href="#events">Events</a></li>
+                    </ul>
+                </nav>
+
+
+                <!--Landing Main-->
+                <div class="container teams-accordion-container">
+                    <div class="container team-button" v-for="(team, key) in teams">
+                        <a class="team-link" @click="displayTeamInfo(key)"> {{ team.name }}</a>
+                        <ul class="container teams-list" v-if="openTeam == key">
+                            <li id="team-logo-container" class="team-info" v-if="openTeam == key"><img class="team_logo" :src="team.logo" alt="team_logo"> <span>{{ team.name }}</span></li>
+                            <ul class="team-event-container team-info">
+                                <li class="each-event" v-for="event in openEvent"> {{ event.date }} {{ event.location }} {{ event.time }} {{ event.team }} {{ event.host }} </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Locations Page-->
+        <div id="locations" v-show="currentView == 'locations'" class="container page-container locations-container">
+            <!--Icons Bar-->
+            <div class="container icons-bar">
+                <ul class="icons-container">
+                    <li class="icons"><a href="mailto:nysl@chisoccer.org.com?Subject=Team Info%20" target="_blank"><img class="icons-image" src="img/002-closed-envelope-circle.png" alt="email-icon"></a></li>
+                    <li class="icons" @click="setCurrentView('chat')"><a href="#chat"><img class="icons-image" src="img/003-speech-bubble.png" alt="chat-icon"></a></li>
+                    <li class="icons" @click="setCurrentView('chat')"><a href="#chat"><img class="icons-image" src="img/004-log-in-button-with-arrow.png" alt="login-icon"></a></li>
+                    <li class="icons"><img class="icons-image" src="img/005-share.png" alt="share-icon"></li>
+                </ul>
+            </div>
+
+            <div class="container landscape-mode">
+                <!--Nav Bar-->
+                <nav class="navigation-bar container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li @click="setCurrentView('teams')"><a href="#teams">Teams</a></li>
+                        <li class="active"><a href="#locations">Locations</a></li>
+                        <li @click="setCurrentView('events')"><a href="#events">Events</a></li>
+                    </ul>
+                </nav>
+
+                <!--Locations Main-->
+                <div class="container iframe-container">
+                    <iframe class="iframe" :src="locations.all" frameborder="0"></iframe>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Events Page-->
+        <div id="events" v-show="currentView == 'events'" class="container page-container events-container">
+            <!--Icons Bar-->
+            <div class="container icons-bar">
+                <ul class="icons-container">
+                    <li class="icons"><a href="mailto:nysl@chisoccer.org.com?Subject=Team Info%20" target="_blank"><img class="icons-image" src="img/002-closed-envelope-circle.png" alt="email-icon"></a></li>
+                    <li class="icons" @click="setCurrentView('chat')"><a href="#chat"><img class="icons-image" src="img/003-speech-bubble.png" alt="chat-icon"></a></li>
+                    <li class="icons" @click="setCurrentView('chat')"><a href="#chat"><img class="icons-image" src="img/004-log-in-button-with-arrow.png" alt="login-icon"></a></li>
+                    <li class="icons"><img class="icons-image" src="img/005-share.png" alt="share-icon"></li>
+                </ul>
+            </div>
+
+            <div class="container landscape-mode">
+                <!--Nav Bar-->
+                <nav class="navigation-bar container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li @click="setCurrentView('teams')"><a href="#teams">Teams</a></li>
+                        <li @click="setCurrentView('locations')"><a href="#locations">Locations</a></li>
+                        <li class="active"><a href="#events">Events</a></li>
+                    </ul>
+                </nav>
+
+                <!--Events Main-->
+                <div class="event-main">
+                    <div id="upcoming-events" class="container">
+                        <h3>Upcoming Events</h3>
+                        <div class="upcoming-text-container">
+                            <div v-for="event in events" class="container upcoming-text">
+                                {{ event.event_date }} <br> {{ event.event_description }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Events Accordions-->
+                    <div id="schedules" class="container schedules-container">
+                        <div class="container schedule-button" v-for="month in schedules">
+                            <a class="schedule-link" @click="displaySchedule(month.name)"> {{ month.name }}</a>
+                            <ul class="events-list">
+                                <li class="event-text" v-if="openSchedule == month.name" v-for="event in month.calendar"> {{ event.date }} {{ event.location }} {{ event.time }} {{ event.team }} {{ event.host }} </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Signin - Chat Page-->
+        <div id="chat" v-show="currentView == 'chat'" class="chat-container">
+           
+            <div class="working-chat">
+                <div id="users_div" class="active-users-container">
+                    <p>Active Users</p>
+                    <div class="photo" v-for="photo in arrayOfUsers" :style="{ 'background-image': 'url(' + photo + ')' }"></div>
+                </div>
+
+                <div class="advice jumbotron">
+                    Hello, user!<br>
+                    Please log in to chat.
+                    <button id="login" class="button is-info">Sign In</button>
+                </div>
+                <div id="posts" class="box">
+                    Loading posts...
+                </div>
+                <hr>
+                <div class="input-send-container">
+                    <input id="textInput" class="input" type="text" placeholder="Type your message...">
+                    <button id="create-post" class="button is-primary"><img class="send-icon" src="img/send.png" alt="send-button"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAPD42bP3Wj2u6CGJ3reQMEdCHi_RFesu8",
+            authDomain: "nysl-mobile-web.firebaseapp.com",
+            databaseURL: "https://nysl-mobile-web.firebaseio.com",
+            projectId: "nysl-mobile-web",
+            storageBucket: "nysl-mobile-web.appspot.com",
+            messagingSenderId: "854425625457"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!--- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  
+    <!--- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+    <!--Bootstrap-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="vue.js"></script>
+    <script src="chat.js"></script>
+</body>
+
+</html>
+
