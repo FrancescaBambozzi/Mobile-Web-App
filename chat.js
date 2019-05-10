@@ -1,31 +1,32 @@
-document.getElementById("login").addEventListener("click", login);
-document.getElementById("create-post").addEventListener("click", writeNewPost);
+//document.getElementById("login").addEventListener("click", login);
+//document.getElementById("logout").addEventListener("click", logout);
+//document.getElementById("create-post").addEventListener("click", writeNewPost);
 
-//var audio = new Audio('stop1.mp3');
-$(".advice").hide();
-$("#posts").hide();
+//getPosts(); 
+//displayElements();
 
-getPosts();
-getUserLoggedIn();
-getUsersOnChat();
+/*function displayElements() {
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            // User is signed in.
+            $(".advice").hide();
+            $("#posts").show();
+            $("#users_div").show();
+            $(".input-send-container").show();
+            getPosts();
+            // getUsersOnChat();
 
-firebase.auth().onAuthStateChanged(function (user) {
-    if (user) {
-        // User is signed in.
-        $(".advice").hide();
-        $("#posts").show();
-        $("#users_div").show();
-        getUserLoggedIn();
+        } else {
+            $(".advice").show();
+            $("#posts").hide();
+            $("#users_div").hide();
+            $(".input-send-container").hide();
+            // User is NOT signed in.
+        }
+    })
+}*/
 
-    } else {
-        $(".advice").show();
-        $("#posts").hide();
-        $("#users_div").hide();
-        // No user is signed in.
-    }
-});
-
-function login() {
+/*function login() {
     var provider = new firebase.auth.GoogleAuthProvider();
 
     firebase.auth().signInWithPopup(provider)
@@ -35,10 +36,19 @@ function login() {
         .catch(function () {
             alert("Something went wrong");
         });
-}
+}*/
 
+/*function logout() {
 
-function writeNewPost() {
+    firebase.auth().signOut().then(function () {
+            console.log('Signed Out');
+        },
+        function (error) {
+            console.error('Sign Out Error', error);
+        });
+}*/
+
+/*function writeNewPost() {
 
     if (!$("#textInput").val()) {
         return
@@ -63,13 +73,11 @@ function writeNewPost() {
 
     $("#textInput").val("");
 
-    // audio.play();
-
     return firebase.database().ref().child('myMatch').update(updates);
 }
+*/
 
-
-function getPosts() {
+/*function getPosts() {
 
     firebase.database().ref('myMatch').on('value', function (data) {
 
@@ -77,10 +85,7 @@ function getPosts() {
         logs.innerHTML = "";
 
         var posts = data.val();
-
         var template = "";
-
-
 
         for (var key in posts) {
 
@@ -88,14 +93,14 @@ function getPosts() {
                 template += `
           <div class="notification is-info">
             <p class="name">${posts[key].name}:</p>
-            <p>${posts[key].body}</p>
+            <p class="post-text">${posts[key].body}</p>
           </div>
         `;
             } else {
                 template += `
           <div class="notification is-primary">
             <p class="name">${posts[key].name}:</p>
-            <p>${posts[key].body}</p>
+            <p class="post-text">${posts[key].body}</p>
           </div>
         `;
             }
@@ -107,37 +112,24 @@ function getPosts() {
             scrollTop: $(".box").prop("scrollHeight")
         }, 500);
     });
-}
+}*/
 
-function getUserLoggedIn() {
-
-    var user = firebase.auth().currentUser;
-    var name, email, photoUrl;
-
-    if (user != null) {
-        name = user.displayName;
-        email = user.email;
-        photoUrl = user.photoURL;
-    }
-
-}
-
-function getUsersOnChat() {
-
+/*function getUsersOnChat() {
+    
     var usersDiv = document.getElementById("users_div");
     usersDiv.innerHTML = "";
 
     firebase.database().ref('myMatch').on('value', function (data) {
-        let chat = data.val()
-        let arrayOfUsers = [];
-
-        for (post in chat) {
-            let el = chat[post];
-            if (el.photo && !arrayOfUsers.includes(el.photo))
-                arrayOfUsers.push(el.photo)
-        }
         
-        app.arrayOfUsers = arrayOfUsers;
-    })
+    let chat = data.val()
+    let arrayOfUsers = [];
 
-}
+    for (post in chat) {
+        let el = chat[post];
+        if (el.photo && !arrayOfUsers.includes(el.photo))
+            arrayOfUsers.push(el.photo)
+    }
+    app.arrayOfUsers = arrayOfUsers;
+ })
+} */
+

@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap Mobile-First approach-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,6 +15,15 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700" rel="stylesheet">
+
+    <!-- Mobile App  Shortcut-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -135,8 +145,15 @@
         </div>
 
         <!--Signin - Chat Page-->
-        <div id="chat" v-show="currentView == 'chat'" class="chat-container">
-           
+        <div id="chat" v-show="currentView == 'chat'" class="page-container chat-container">
+
+
+            <div class="back-icons-container">
+                <h4 class="chat-title">Nysl chat</h4>
+                <img class="back-icon" @click="setCurrentView('teams')" src="img/left-arrow.png" alt="go-back-button">
+                <img id="logout" class="back-icon" src="img/logout.png" alt="log-out-button" @click="logout()">
+            </div>
+
             <div class="working-chat">
                 <div id="users_div" class="active-users-container">
                     <p>Active Users</p>
@@ -146,15 +163,22 @@
                 <div class="advice jumbotron">
                     Hello, user!<br>
                     Please log in to chat.
-                    <button id="login" class="button is-info">Sign In</button>
+                    <button id="login" class="button is-info" @click="login()">Sign In</button>
                 </div>
+
                 <div id="posts" class="box">
-                    Loading posts...
+                    <div class="notification" :class="{'is-primary': userName != post.name,
+                    'is-info': userName == post.name,
+                       }" v-for="post in posts">
+                        <p class="name">{{post.name}}:</p>
+                        <p class="post-text">{{post.body}}</p>
+                    </div>
                 </div>
                 <hr>
+
                 <div class="input-send-container">
                     <input id="textInput" class="input" type="text" placeholder="Type your message...">
-                    <button id="create-post" class="button is-primary"><img class="send-icon" src="img/send.png" alt="send-button"></button>
+                    <button id="create-post" class="button is-primary"><img class="send-icon" src="img/send.png" alt="send-button" @click="writeNewPost()"></button>
                 </div>
             </div>
         </div>
@@ -176,15 +200,13 @@
 
     <!--- Vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  
+
     <!--- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  
+
     <!--Bootstrap-->
     <script src="js/bootstrap.min.js"></script>
     <script src="vue.js"></script>
-    <script src="chat.js"></script>
 </body>
 
 </html>
-

@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     padding: 0;
+    height: 100%;
 }
 
 /*
@@ -98,6 +99,10 @@ ul li {
     font-size: 16px;
 }
 
+.active {
+    background-color: rgba(0, 0, 0, .8);
+}
+
 /*
   ========================================
   Landing Page
@@ -113,6 +118,7 @@ ul li {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
+    height: 100%;
     padding-top: 30px;
 }
 
@@ -223,6 +229,7 @@ ul li {
   Events Page
   ========================================
 */
+
 .events-container {
     display: flex;
     width: 300px;
@@ -265,21 +272,20 @@ ul li {
 }
 
 .schedule-button {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
     text-align: center;
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 5px;
     background-image: linear-gradient(90deg, #BF3A8D 0%, #E91C3E 100%);
     opacity: 0.9;
     box-shadow: 2px 2px 2px #2f2f2f;
     border-radius: 5px;
-    width: 300px;
-    margin-bottom: 5px;
 }
 
 .schedule-link {
     color: #fff;
-    padding-top: 10px;
+    padding: 10px;
+
 }
 
 .schedule-link:hover {
@@ -289,7 +295,6 @@ ul li {
 }
 
 .events-list {
-    margin-top: 20px;
     border-left: 1px solid #f2f2f2;
 }
 
@@ -299,29 +304,9 @@ ul li {
 
 /*
   ========================================
-  Sign In Page
+  Sign In & Chat Page
   ========================================
 */
-/*
-.message {
-    border: 1px solid black;
-    padding: 5px;
-    margin: 5px;
-    background-color: lightgoldenrodyellow;
-    border-radius: 10px;
-    opacity: 0.8;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-} */
-
-.myMessage {
-    border: 1px solid black;
-    padding: 5px;
-    margin: 5px;
-    background-color: rgb(210, 250, 220);
-    border-radius: 10px;
-    opacity: 0.8;
-}
-
 #posts {
     height: 350px;
     width: 300px;
@@ -340,6 +325,30 @@ ul li {
     margin: 10px 10px 0 10px;
 }
 
+.back-icons-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.chat-title {
+    font-size: 40px;
+    font-family: "Staatliches", sans-serif;
+    text-decoration: underline overline;
+    margin-right: 90px;
+}
+
+.back-icon {
+    width: 25px;
+    height: 25px;
+    align-self: center;
+}
+
+#logout {
+    margin-left: 10px;
+}
+
 .chat-container {
     height: 100%;
     display: flex;
@@ -349,14 +358,6 @@ ul li {
     width: 100%;
     padding: 30px 0 30px 0;
     background-color: #f2f2f2;
-}
-
-.chat-container:before {
-    content: "Nysl chat";
-    font-size: 40px;
-    margin-bottom: 30px;
-    font-family: "Staatliches", sans-serif;
-    text-decoration: underline overline;
 }
 
 .working-chat {
@@ -394,6 +395,7 @@ ul li {
 .notification.is-info {
     text-align: right;
     max-width: 80%;
+    display: inline-block;
     align-self: flex-end;
     padding: 5px;
     margin: 5px;
@@ -406,6 +408,7 @@ ul li {
 .notification.is-primary {
     text-align: left;
     max-width: 80%;
+    display: inline-block;
     align-self: flex-start;
     padding: 5px;
     margin: 5px;
@@ -413,6 +416,10 @@ ul li {
     box-shadow: 2px 2px 2px #2f2f2f;
     opacity: 0.9;
     border-radius: 10px;
+    overflow-wrap: break-word;
+    /* the browser can break a line of text inside the targeted element into multiple lines */
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 hr {
@@ -441,7 +448,7 @@ hr {
 }
 
 #textInput {
-    color: # fff;
+    color: #fff;
 }
 
 .send-icon {
@@ -474,20 +481,231 @@ hr {
     text-transform: capitalize;
 }
 
-/*
-  ========================================
-  Chat In Page
-  ========================================
-*/
+.post-text {
+    color: #2f2f2f;
+}
+
+/* ----------- iPhone 5 and 5s ----------- */
+
+@media screen and (device-aspect-ratio: 40/71) {
+
+    /* General layout */
+    .page-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Landing Page */
+    .team-link {
+        padding: 13px;
+        font-size: 18px;
+    }
 
 
-/*****
-  ========================================
+    /* Locations Page */
+    .iframe-container {
+        height: 430px;
+    }
+
+    /* Events Page */
+    .schedule-link {
+        padding: 0;
+    }
+
+    .schedule-button {
+        padding: 0;
+    }
+
+    .upcoming-text-container {
+        padding-bottom: 5px;
+    }
+
+    /* Chat Page */
+    .back-icons-container {
+        margin: 0;
+    }
+
+    .chat-container {
+        padding-top: 10px;
+    }
+
+    .chat-title {
+        font-size: 28px;
+    }
+
+    .back-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .photo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .name {
+        margin-bottom: 2px;
+    }
+
+    p {
+        margin-bottom: 2px;
+    }
+
+    hr {
+        margin: 0;
+    }
+}
+
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+
+    /* Landing Page */
+    .page-container {
+        padding-top: 50px;
+    }
+
+    .icons-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navigation-bar ul li a {
+        font-size: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        line-height: 25px;
+    }
+
+    .team-link {
+        font-size: 22px;
+    }
+
+    /* Locations Page */
+    .iframe-container {
+        height: 550px;
+        width: 350px;
+    }
+
+    /* Events Page */
+    .upcoming-text {
+        font-size: 16px;
+    }
+
+    .schedule-link {
+        font-size: 22px;
+    }
+
+    /* Chat Page */
+    .chat-container {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    #posts {
+        height: 400px;
+    }
+}
+
+/* ----------- iPhone X ----------- */
+
+@media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3) {
+
+    /* Landing Page */
+    .page-container {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    .icons-image {
+        width: 45px;
+        height: 45px;
+    }
+
+    .navigation-bar {
+        margin-top: 20px;
+    }
+
+    .navigation-bar ul li a {
+        font-size: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        line-height: 25px;
+    }
+
+    .teams-accordion-container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .team-button {
+        margin-bottom: 10px;
+    }
+
+    .team-link {
+        font-size: 22px;
+    }
+
+    /* Locations Page */
+    .iframe-container {
+        height: 600px;
+        width: 350px;
+    }
+
+    /* Events Page */
+    #upcoming-events {
+        margin-top: 50px;
+    }
+
+    .upcoming-text {
+        font-size: 16px;
+    }
+
+    .schedule-button {
+        margin-bottom: 10px;
+    }
+
+    .schedule-link {
+        font-size: 22px;
+    }
+
+    /* Chat Page */
+    .chat-title {
+        font-size: 45px;
+        margin-right: 75px;
+    }
+
+    .back-icons-container {
+        margin-bottom: 20px;
+    }
+
+    .back-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .active-users-container {
+        padding: 15px;
+    }
+
+    .working-chat {
+        width: 330px;
+    }
+
+    #posts {
+        height: 450px;
+    }
+
+}
+
+/************************************
   Landscape Mode Style
-  ========================================
-*****/
+************************************/
 
-@media (orientation: landscape) {
+/* Iphone 6,7,8 */
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
 
     /*General Layout*/
     .page-container {
@@ -497,6 +715,7 @@ hr {
         margin: 0;
         padding: 0;
     }
+
 
     /*Typography*/
     h3 {
@@ -523,6 +742,7 @@ hr {
     .icons {
         margin-top: 10px;
     }
+
 
     /*Landing Page Layout*/
     .landing_page {
@@ -574,6 +794,7 @@ hr {
         height: 70px;
     }
 
+
     /*Locations Page Layout*/
     .iframe-container {
         height: 300px;
@@ -592,7 +813,7 @@ hr {
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
-        width: 500px;
+        width: 100%;
         margin-top: 10px;
     }
 
@@ -606,6 +827,7 @@ hr {
     .upcoming-text:last-child {
         border: none;
     }
+
 
     /*Schedule Buttons*/
     .schedules-container {
@@ -625,6 +847,7 @@ hr {
         font-size: 16px;
         text-align: center;
         margin: 0;
+        padding: 5px;
     }
 
     .events-list {
@@ -638,15 +861,22 @@ hr {
         width: 200px;
     }
 
+
     /*Chat Style*/
     .chat-container {
         padding: 5px 0 5px 0;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
     }
 
-    .chat-container:before {
-        margin-bottom: 5px;
-        font-size: 26px;
-        margin-top: 5px;
+    .chat-title {
+        font-size: 30px;
+    }
+
+    .back-icon {
+        width: 20px;
+        height: 20px;
     }
 
     .working-chat {
@@ -656,13 +886,18 @@ hr {
         width: 90%;
     }
 
+    hr {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
     #users_div {
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
         border-bottom: 1px solid #fff;
-        margin: 10px;
-        padding: 10px;
+        margin: 5px;
+        padding: 5px;
         width: 90%;
     }
 
